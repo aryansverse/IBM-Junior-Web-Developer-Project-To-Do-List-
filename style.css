@@ -1,0 +1,186 @@
+*,
+*:before,
+*:after {
+padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Neu Machina fonts - using the OTF files included in the project
+   Files found in: "Neue Machina - Free for Personal Use/" */
+@font-face {
+    font-family: 'Neu Machina';
+    src: url("./Neue Machina - Free for Personal Use/NeueMachina-Light.otf") format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neu Machina';
+    src: url("./Neue Machina - Free for Personal Use/NeueMachina-Regular.otf") format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neu Machina';
+    src: url("./Neue Machina - Free for Personal Use/NeueMachina-Ultrabold.otf") format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+html, body {
+    font-family: 'Neu Machina', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+    height: 100vh;
+    background: #132440;
+}
+
+#title{
+    margin: 0 0 16px 0;
+    color: #BF092F;
+    text-align: center;
+}
+
+#nav1{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0 20px 0;
+}
+
+#nav1 input[type="text"]{
+    flex: 1 1 300px;
+    max-width: 600px;
+    padding: 10px 12px;
+    font-size: 16px;
+}
+
+#nav1 button{
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #3B9797;
+    border: 2px solid beige;
+    border-radius: 999px; /* pill-shaped */
+    color: white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    transition: transform 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+#nav1 button:hover{
+    transform: translateY(-2px);
+    background: #2f7f7f;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+#nav1 button:focus{
+    outline: 3px solid rgba(59,151,151,0.18);
+    outline-offset: 2px;
+}
+
+.container{
+    width: 80%;
+    max-width: 900px;
+    height: 80%;
+    padding: 32px;
+    margin: 80px auto; /* centers container horizontally and gives top spacing */
+    background: beige;
+    border-radius: 8px;
+    min-width: 280px;
+    position: relative;
+}
+
+
+.task{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #3B9797;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    background: #fffef6; /* light so items are readable */
+    min-height: 48px;
+}
+
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border-bottom: 1px solid rgba(15,98,254,0.08);
+}
+
+.task-text.completed{
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.no-tasks{
+    color: #333;
+    opacity: 0.8;
+    padding: 8px;
+}
+
+.task.overflow{
+overflow-y: auto;
+max-height: 300px;
+}
+
+.task::-webkit-scrollbar {
+width: 10px;
+}
+.task::-webkit-scrollbar-track {
+background: #BAE6FF;
+border-radius: 25px;
+}
+.task::-webkit-scrollbar-thumb {
+background: #0D75EC;
+border-radius: 25px;
+}
+
+footer{
+    font-size: larger;
+    text-align: center;
+    color: #ddd;
+    margin: 24px 0 40px 0;
+}
+
+.social-links{
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.social-links a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #fff;
+    background: rgba(255,255,255,0.06);
+    transition: background 160ms ease, transform 120ms ease;
+}
+
+.social-links a:hover{
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-3px);
+}
+
+.social-links svg{
+    width: 20px;
+    height: 20px;
+    display: block;
+}
